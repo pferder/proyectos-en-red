@@ -1,0 +1,27 @@
+<nav-bar></nav-bar>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Nombre del Proyecto</label>
+    <div class="col-sm-10">
+      <input ng-model="name" class="form-control" id="inputEmail3" placeholder="Elegí un nombre que no deje dudas">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Descripción</label>
+    <div class="col-sm-10">
+      <textarea ng-model="desc" class="form-control" id="inputPassword3" placeholder="¿De que se trata?"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Etiquetas</label>
+    <div class="col-sm-10">
+      <multiselect ng-model="selectedTags" options="tag for tag in tags" data-multiple="true" max-width="150" tabindex="-1"></multiselect>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button ng-click="save()" class="btn btn-success">Crear Proyecto</button>
+    </div>
+  </div>
+</form>
+<footer></footer>
