@@ -1,42 +1,38 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  /**
-   * @ngdoc function
-   * @name proyectosEnRedApp.controller:AboutCtrl
-   * @description
-   * # AboutCtrl
-   * Controller of the proyectosEnRedApp
-   */
-  angular.module('proyectosEnRedApp')
-    .controller('NewProjectCtrl', ['$scope', '$state', 'Projects', NewProjectCtrl])
+    angular.module('proyectosEnRedApp')
+        .controller('NewProjectCtrl', ['$scope', '$state', 'Projects', NewProjectCtrl])
 
-  function NewProjectCtrl($scope, $state, Projects) {
-    $scope.user = firebase.auth().currentUser;
+    function NewProjectCtrl($scope, $state, Projects) {
 
-    if (!$scope.user) {
-      $state.go('signin');
-    }
+        var vm = this;
 
-    $scope.tags = ['Afiliaciones', 'Comunicación', 'Financiamiento', 'Organización', 'Plataformas', 'Territorio'];
+        $scope.user = firebase.auth().currentUser;
 
-    $scope.save = function() {
-        var project = {
-            createdBy: {
-                uid: $scope.user.uid,
-                displayName: $scope.user.displayName,
-                email: $scope.user.email
-            },
-            timestamp: +new Date().getTime(),
-            name: $scope.name,
-            desc: $scope.desc,
-            tags: $scope.selectedTags
+        if (!$scope.user) {
+            $state.go('signin');
         }
 
-        Projects.set(project);
-        $state.go('projects');
-    }
+        $scope.tags = ['Afiliaciones', 'Comunicación', 'Financiamiento', 'Organización', 'Plataformas', 'Territorio'];
 
-  }
+        $scope.save = function() {
+            var project = {
+                createdBy: {
+                    uid: $scope.user.uid,
+                    displayName: $scope.user.displayName,
+                    email: $scope.user.email
+                },
+                timestamp: +new Date().getTime(),
+                name: $scope.name,
+                desc: $scope.desc,
+                tags: vm.selectedTags
+            }
+            console.log(project);
+            Projects.set(project);
+            $state.go('projects');
+        }
+
+    }
 
 })();

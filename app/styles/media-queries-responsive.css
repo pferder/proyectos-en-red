@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    .projects-container {
+        height: 100%;
+    }
+    .project {
+        width: 100%;
+    }
+    .navbar-profile {
+        display: none;
+    }
+}

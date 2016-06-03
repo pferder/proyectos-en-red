@@ -1,118 +1,142 @@
 .browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
+
 body {
-  padding: 0;
+    padding: 0;
 }
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 
 .marketing {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
 
 /* Custom page header */
 
 .header {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 
 /* Make the masthead heading the same height as the navigation */
 
 .header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
 }
+
 
 /* Custom page footer */
 
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
+
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
+
 
 /* Main marketing message and sign up button */
 
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+    font-size: 21px;
+    padding: 14px 24px;
 }
+
 
 /* Supporting marketing content */
 
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
+
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
+
 .form-signin {
-  padding: 5% 20% 5% 20%;
+    padding: 5% 20% 5% 20%;
 }
+
 .projects-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin: 2% 5%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 2% 5%;
+    height: 150vw;
 }
+
 .project {
-  min-width: 20%;
-  max-width: 250px;
-  flex-grow: 1;
-  margin-right: 5%;
+    flex-shrink: 0;
+    width: 33.3%;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    transition: .8s opacity;
 }
+
+.project img {
+    width: 98%;
+}
+
+.project:hover img {
+    opacity: 0.5;
+}
+
 .project-filters-container {
-  display: flex;
-  justify-content: center;
-  margin: 0 15% 0 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
 .project-filter {
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
+#project-timestamp {
+    font-size: 13px;
+    color: #666;
+    margin-top: -4%;
+}
+
 .navbar-profile {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: -45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -45px;
 }
+
 .navbar-profile-name {
-  margin-right: 5px;
-  font-size: 16px;
-  color: #fff;
+    margin-right: 5px;
+    font-size: 16px;
+    color: #fff;
 }
 
-/* Responsive: Portrait tablets and up */
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-  /* Remove the padding we set earlier */
-  .header, .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+#new-project-form {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: 0 5%;
 }
